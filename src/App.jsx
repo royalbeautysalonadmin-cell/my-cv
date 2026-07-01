@@ -14,6 +14,7 @@ import Appointment from './components/Appointment';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
+import BackToTop from './components/BackToTop';
 
 export default function App() {
   const [loaded, setLoaded] = useState(false);
@@ -45,6 +46,7 @@ export default function App() {
       </div>
 
       <FloatingWhatsApp />
+      <BackToTop />
     </>
   );
 }
