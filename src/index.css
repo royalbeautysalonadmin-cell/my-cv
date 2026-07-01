@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  * {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-surface-50 text-slate-600 font-sans antialiased;
+    background-color: #f6f8fb;
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #eef2f7;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 999px;
+    border: 2px solid #eef2f7;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+  }
+
+  ::selection {
+    background: #dbeafe;
+    color: #0f172a;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply border border-slate-200 bg-white/80 backdrop-blur-xl
+      shadow-[0_10px_30px_-18px_rgba(30,41,59,0.35)];
+  }
+
+  .glass-strong {
+    @apply border border-slate-200 bg-white/90 backdrop-blur-2xl
+      shadow-[0_18px_50px_-24px_rgba(30,41,59,0.45)];
+  }
+
+  /* Kept the class name so usages don't change; now a solid accent colour. */
+  .neon-text {
+    @apply text-blue-700;
+  }
+
+  .section-pad {
+    @apply px-5 sm:px-8 lg:px-16 py-24 lg:py-32;
+  }
+
+  .container-max {
+    @apply mx-auto w-full max-w-7xl;
+  }
+
+  /* A clean bordered container (used for the AS monogram, avatar frames, etc.) */
+  .gradient-border {
+    @apply border border-slate-200 bg-white;
+  }
+
+  .btn-primary {
+    @apply relative inline-flex items-center justify-center gap-2 rounded-full px-6 py-3
+      font-semibold text-white transition-all duration-300
+      bg-blue-600 shadow-[0_8px_24px_-10px_rgba(37,99,235,0.7)]
+      hover:bg-blue-700 hover:-translate-y-0.5;
+  }
+
+  .btn-ghost {
+    @apply relative inline-flex items-center justify-center gap-2 rounded-full px-6 py-3
+      font-semibold text-slate-700 transition-all duration-300
+      border border-slate-300 bg-white
+      hover:border-blue-500 hover:text-blue-700 hover:-translate-y-0.5;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white
+      px-3 py-1 text-xs font-medium text-slate-600;
+  }
+}
+
+@layer utilities {
+  .grid-lines {
+    background-image:
+      linear-gradient(rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 40%, transparent 100%);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Hide default cursor only on devices with a fine pointer (desktop) */
+@media (hover: hover) and (pointer: fine) {
+  .custom-cursor-active,
+  .custom-cursor-active * {
+    cursor: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

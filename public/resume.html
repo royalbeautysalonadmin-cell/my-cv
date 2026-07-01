@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abdul Saboor — Resume</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #0f1220;
+        --muted: #55607a;
+        --line: #e3e7ef;
+        --accent: #2563eb;
+        --accent2: #1e40af;
+      }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        font-family: 'Inter', system-ui, sans-serif;
+        color: var(--ink);
+        background: #f5f6fa;
+        line-height: 1.5;
+        padding: 32px 16px;
+      }
+      .sheet {
+        max-width: 820px;
+        margin: 0 auto;
+        background: #fff;
+        border-radius: 14px;
+        box-shadow: 0 20px 60px -20px rgba(15, 18, 32, 0.25);
+        overflow: hidden;
+      }
+      .header {
+        background: #0f172a;
+        color: #fff;
+        padding: 40px 44px;
+      }
+      .header h1 { font-size: 34px; font-weight: 700; letter-spacing: -0.5px; }
+      .header .role {
+        font-size: 16px; font-weight: 500; margin-top: 4px;
+        color: #a9b4ff;
+      }
+      .contact {
+        margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 20px;
+        font-size: 13px; color: #cfd6ef; font-family: 'JetBrains Mono', monospace;
+      }
+      .contact a { color: #cfd6ef; text-decoration: none; }
+      .body { padding: 36px 44px 44px; }
+      .toolbar {
+        max-width: 820px; margin: 0 auto 16px; display: flex; justify-content: flex-end;
+      }
+      .print-btn {
+        font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600;
+        color: #fff; background: var(--accent);
+        border: none; border-radius: 999px; padding: 10px 22px; cursor: pointer;
+        box-shadow: 0 8px 24px -8px rgba(109, 59, 245, 0.6);
+      }
+      section { margin-top: 26px; }
+      h2 {
+        font-size: 13px; text-transform: uppercase; letter-spacing: 2px;
+        color: var(--accent); border-bottom: 2px solid var(--line);
+        padding-bottom: 6px; margin-bottom: 12px;
+      }
+      p.summary { color: #333a4d; font-size: 14.5px; }
+      .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 28px; }
+      .skill-row { font-size: 14px; padding: 5px 0; border-bottom: 1px solid var(--line); }
+      .skill-row b { color: var(--ink); }
+      .skill-row span { color: var(--muted); }
+      .item { margin-bottom: 16px; }
+      .item h3 { font-size: 15.5px; }
+      .item .meta { font-size: 12.5px; color: var(--muted); font-family: 'JetBrains Mono', monospace; }
+      .item ul { margin: 6px 0 0 18px; }
+      .item li { font-size: 13.5px; color: #333a4d; margin-bottom: 3px; }
+      .tags { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px; }
+      .tag {
+        font-size: 11.5px; font-family: 'JetBrains Mono', monospace;
+        background: #f0f1f7; color: #444c66; padding: 3px 9px; border-radius: 999px;
+      }
+      @media (max-width: 640px) {
+        body { padding: 16px 10px; }
+        .header { padding: 28px 22px; }
+        .header h1 { font-size: 26px; }
+        .contact { font-size: 12px; }
+        .body { padding: 24px 22px 30px; }
+        .grid { grid-template-columns: 1fr; }
+        .toolbar { padding-right: 6px; }
+      }
+      @media print {
+        body { background: #fff; padding: 0; }
+        .toolbar { display: none; }
+        .sheet { box-shadow: none; border-radius: 0; max-width: 100%; }
+        @page { margin: 12mm; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar">
+      <button class="print-btn" onclick="window.print()">⬇ Download / Print PDF</button>
+    </div>
+
+    <div class="sheet">
+      <div class="header">
+        <h1>Abdul Saboor</h1>
+        <div class="role">Full-Stack MERN Developer · Founder, Orbitrix Solutions · CS Student</div>
+        <div class="contact">
+          <a href="mailto:abdulsaboormercedes@gmail.com">abdulsaboormercedes@gmail.com</a>
+          <a href="tel:+923284678752">+92 328 4678752</a>
+          <a href="https://wa.me/qr/7GSRQFMD6AMZG1">WhatsApp</a>
+          <a href="https://github.com/abdulsaboorera-bit">github.com/abdulsaboorera-bit</a>
+          <span>Pakistan</span>
+        </div>
+      </div>
+
+      <div class="body">
+        <section>
+          <h2>Professional Summary</h2>
+          <p class="summary">
+            Passionate Computer Science student, founder of Orbitrix Solutions, and Full-Stack
+            MERN Developer specializing in building modern, scalable, responsive, and SEO-friendly
+            web applications. Experienced across the full stack — React front ends, Node.js/Express
+            APIs, MongoDB &amp; SQL databases — with a growing DevOps skill set in Linux, Docker,
+            Jenkins, and CI/CD.
+          </p>
+        </section>
+
+        <section>
+          <h2>Ventures &amp; Startups</h2>
+          <div class="item">
+            <h3>Orbitrix Solutions — Founder &amp; Full-Stack Developer</h3>
+            <div class="meta">Digital Agency</div>
+            <ul>
+              <li>Full-service digital agency building modern websites, digital solutions, and scalable online experiences.</li>
+              <li>Specializes in web development, SEO, AI automation, and digital marketing strategies to help businesses grow online.</li>
+              <li>Delivers responsive, performance-driven products through innovative technology, creative design, and data-driven approaches.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Web Development</span><span class="tag">SEO</span>
+              <span class="tag">AI Automation</span><span class="tag">Digital Marketing</span>
+            </div>
+          </div>
+          <div class="item">
+            <h3>MediConnect — Founder &amp; Full-Stack Developer</h3>
+            <div class="meta">HealthTech Startup · MERN</div>
+            <ul>
+              <li>Telemedicine startup with role-based portals for patients, doctors, and admins.</li>
+              <li>JWT authentication, automated commission engine, and a doctor verification workflow.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">React</span><span class="tag">Node.js</span>
+              <span class="tag">Express</span><span class="tag">MongoDB</span><span class="tag">JWT</span>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Technical Skills</h2>
+          <div class="grid">
+            <div class="skill-row"><b>Frontend:</b> <span>React.js, JavaScript, HTML5, CSS3, Tailwind</span></div>
+            <div class="skill-row"><b>Backend:</b> <span>Node.js, Express.js, REST APIs, JWT</span></div>
+            <div class="skill-row"><b>Databases:</b> <span>MongoDB, SQL, Mongoose</span></div>
+            <div class="skill-row"><b>Languages:</b> <span>C/C++, Java (OOP), JavaScript</span></div>
+            <div class="skill-row"><b>DevOps &amp; Tools:</b> <span>Linux, Docker, Jenkins, CI/CD, Git</span></div>
+            <div class="skill-row"><b>Other:</b> <span>WordPress, SEO, Performance Optimization</span></div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Featured Projects</h2>
+          <div class="item">
+            <h3>MERN E-Commerce Platform</h3>
+            <div class="meta">Full-Stack MERN · REST API</div>
+            <ul>
+              <li>Product catalog, cart, checkout, and order lifecycle management.</li>
+              <li>Admin dashboard with inventory management on a secure REST API.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">React</span><span class="tag">Node.js</span>
+              <span class="tag">Express</span><span class="tag">MongoDB</span>
+            </div>
+          </div>
+          <div class="item">
+            <h3>Dockerized CI/CD Pipeline</h3>
+            <div class="meta">DevOps · Docker · Jenkins · Linux</div>
+            <ul>
+              <li>Multi-stage Docker builds with an automated Jenkins pipeline.</li>
+              <li>Linux-based deployment workflow with version control.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Docker</span><span class="tag">Jenkins</span>
+              <span class="tag">Linux</span><span class="tag">CI/CD</span>
+            </div>
+          </div>
+          <div class="item">
+            <h3>REST API Service</h3>
+            <div class="meta">Backend · Node · Express · MongoDB</div>
+            <ul>
+              <li>Modular REST API with JWT auth, validation, and centralized error handling.</li>
+              <li>Clean, layered controller/service architecture.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Node.js</span><span class="tag">Express</span>
+              <span class="tag">MongoDB</span><span class="tag">JWT</span>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Learning Journey</h2>
+          <div class="item">
+            <ul>
+              <li><b>Fundamentals:</b> C/C++ and Java OOP, data structures, problem-solving.</li>
+              <li><b>Frontend:</b> HTML5, CSS3, JavaScript, and React.js interfaces.</li>
+              <li><b>Backend:</b> Node.js, Express.js, REST APIs, and authentication.</li>
+              <li><b>Full-Stack:</b> MongoDB &amp; SQL data layers integrated into MERN apps.</li>
+              <li><b>DevOps:</b> Linux, Docker, Jenkins, and CI/CD deployment pipelines.</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
