@@ -162,6 +162,20 @@ export default function Footer() {
           <p className="text-center font-mono text-xs text-slate-500">
             © {year} Abdul Saboor. All rights reserved.
           </p>
+          <div className="flex items-center gap-4">
+            <a
+              href="/privacy.html"
+              className="font-mono text-xs text-slate-500 transition-colors hover:text-blue-700"
+            >
+              Privacy Policy
+            </a>
+            <a
+              href="/terms.html"
+              className="font-mono text-xs text-slate-500 transition-colors hover:text-blue-700"
+            >
+              Terms &amp; Conditions
+            </a>
+          </div>
           <p className="font-mono text-xs text-slate-400">
             Built with React, Tailwind &amp; Framer Motion.
           </p>
